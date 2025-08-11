@@ -1,6 +1,6 @@
 {
   "name": "@andyvanee/languagemodel-types",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Typescript support for language model interfaces",
   "license": "MIT",
   "author": "Andy VanEe <1andyvanee@gmail.com>",

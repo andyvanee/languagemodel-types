@@ -105,16 +105,21 @@ export interface DownloadProgressEvent {
 }
 
 /**
+ * A callback function to monitor the download progress of the language model.
+ */
+export type LanguageModelDownloadMonitor = (monitor: {
+  addEventListener: (
+    event: "downloadprogress",
+    listener: (e: DownloadProgressEvent) => void
+  ) => void;
+}) => void;
+
+/**
  * Options for creating a new language model session.
  */
 export interface LanguageModelCreateOptions {
-  /** An object to monitor download progress. */
-  monitor?: {
-    addEventListener: (
-      event: "downloadprogress",
-      listener: (e: DownloadProgressEvent) => void
-    ) => void;
-  };
+  /** A function to monitor download progress. */
+  monitor?: LanguageModelDownloadMonitor;
 
   /** An AbortSignal to cancel the session creation. */
   signal?: AbortSignal;
