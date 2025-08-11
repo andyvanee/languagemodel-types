@@ -218,9 +218,12 @@ export interface LanguageModelSession {
 export interface LanguageModel {
   /**
    * Checks the availability of the language model.
+   * @param options Options to check availability against, such as for fine-tuned models.
    * @returns A promise that resolves to the `LanguageModelAvailability` status.
    */
-  availability(): Promise<LanguageModelAvailability>;
+  availability(
+    options?: LanguageModelCreateOptions
+  ): Promise<LanguageModelAvailability>;
 
   /**
    * Creates a new language model session.

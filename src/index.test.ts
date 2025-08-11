@@ -77,6 +77,15 @@ describe("LanguageModel API Type Tests", () => {
     expect(typeof availability).toBe("string");
   });
 
+  it("should allow checking model availability with options", async () => {
+    const options: LanguageModelCreateOptions = {
+      temperature: 0.8,
+      topK: 5,
+    };
+    const availability = await LanguageModel.availability(options);
+    expect(typeof availability).toBe("string");
+  });
+
   it("should allow creating a session", async () => {
     const session = await LanguageModel.create();
     expect(session).toBeDefined();
