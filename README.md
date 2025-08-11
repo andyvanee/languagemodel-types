@@ -7,7 +7,7 @@ This package provides TypeScript definitions for the experimental Web Platform's
 You can install this package using npm:
 
 ```bash
-npm install languagemodel-types
+npm install @andyvanee/languagemodel-types
 ```
 
 ## Usage
@@ -15,7 +15,10 @@ npm install languagemodel-types
 Once installed, you can use the types in your TypeScript project. For example, you can create a function that interacts with the Language Model API and uses the types from this package to ensure type safety.
 
 ```typescript
-import { LanguageModel, LanguageModelSession } from "languagemodel-types";
+import {
+  LanguageModel,
+  LanguageModelSession,
+} from "@andyvanee/languagemodel-types";
 
 async function getResponse(prompt: string): Promise<string | null> {
   if ((await LanguageModel.availability()) === "available") {
