@@ -210,6 +210,12 @@ export interface LanguageModelSession {
 
   /** The maximum number of tokens allowed in the session's input. */
   readonly inputQuota: number;
+
+  /** The temperature for sampling, controlling the randomness of the output. */
+  readonly temperature?: number;
+
+  /** The top-K value for sampling, limiting the vocabulary for the next token. */
+  readonly topK?: number;
 }
 
 /**

@@ -55,6 +55,8 @@ const mockSession: LanguageModelSession = {
   get inputQuota() {
     return 100;
   },
+  temperature: 0.8,
+  topK: 5,
 };
 
 const mockLanguageModel: LanguageModel = {
@@ -170,5 +172,11 @@ describe("LanguageModel API Type Tests", () => {
   it("should allow destroying a session", async () => {
     const session = await LanguageModel.create();
     expect(() => session.destroy()).not.toThrow();
+  });
+
+  it("should have readonly temperature and topK on session", async () => {
+    const session = await LanguageModel.create();
+    expect(typeof session.temperature).toBe("number");
+    expect(typeof session.topK).toBe("number");
   });
 });
