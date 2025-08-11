@@ -7,6 +7,7 @@
  */
 
 import { JSONSchema7 } from "json-schema";
+import { ReadableStream } from "stream/web";
 
 /**
  * Represents the availability of the language model.
