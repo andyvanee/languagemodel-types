@@ -1,0 +1,24 @@
+{
+  "name": "languagemodel-types",
+  "version": "1.0.0",
+  "description": "Typescript support for language model interfaces",
+  "license": "MIT",
+  "author": "Andy VanEe <1andyvanee@gmail.com>",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/json-schema": "^7.0.15",
+    "jest": "^30.0.5",
+    "ts-jest": "^29.4.1",
+    "typescript": "^5.9.2"
+  }
+}
